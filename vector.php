@@ -25,7 +25,7 @@
     static length(val1, val2){
         length = val1.x*val2.x + val1.y*val2.y;
 
-       return new Vector(this.x = this.x/length, this.y= this.y/length);
+       return new Vector(this.x/length, this.y/length);
     }
 
     magnitude(){
