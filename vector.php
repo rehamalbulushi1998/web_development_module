@@ -23,9 +23,10 @@
     }
 
     static length(val1, val2){
-        length = val1.x*val2.x + val1.y*val2.y;
+       
+       var length = Math.sqrt(this.x*this.x+this.y*this.y);
 
-       return new Vector(this.x/length, this.y/length);
+       return length;
     }
 
     magnitude(){
@@ -35,14 +36,14 @@
     unitVector(){
         
             return new Vector(this.x/this.magnitude(), this.y/this.magnitude());
-        }
-
     }
-
-    this.getAngle = function(){
-    var vectorAngle = Math.atan2(this.y, this.x);
-    var degrees = 180 * vectorAngle / Math.PI;
-    return (360 + Math.round(degrees)) % 360;
+      
+   getAngle(){
+      var vectorAngle = Math.atan2(this.y, this.x);
+      var degrees = 180 * vectorAngle / Math.PI;
+      return (360 + Math.round(degrees)) % 360;
+    } 
+    
 }
  
 
