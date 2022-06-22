@@ -19,27 +19,29 @@
 
     multiplay(n){
      
-        var result = Vector(this.x*n, this.y*n);   
+        return new Vector(this.x*n, this.y*n);   
     }
 
     static length(val1, val2){
-        return val1.x*val2.x + val1.y*val2.y;
+        length = val1.x*val2.x + val1.y*val2.y;
+
+       return new Vector(this.x = this.x/length, this.y= this.y/length);
     }
 
     magnitude(){
         return Math.sqrt(this.x**2 + this.y**2);
     }
 
-    unitvector(){
+    unitVector(){
         
             return new Vector(this.x/this.magnitude(), this.y/this.magnitude());
         }
 
     }
-    //
+
     this.getAngle = function(){
-    var vector_angle = Math.atan2(this.y, this.x);
-    var degrees = 180 * vector_angle / Math.PI;
+    var vectorAngle = Math.atan2(this.y, this.x);
+    var degrees = 180 * vectorAngle / Math.PI;
     return (360 + Math.round(degrees)) % 360;
 }
  
