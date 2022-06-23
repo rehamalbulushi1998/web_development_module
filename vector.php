@@ -22,9 +22,9 @@
         return new Vector(this.x*n, this.y*n);   
     }
 
-    static length(v){
+    static length(){
        
-       var length = Math.sqrt(this.x*v.x+this.y*v.y);
+       var length = Math.sqrt(this.x*this.x+this.y*this.y);
 
        return length;
     }
